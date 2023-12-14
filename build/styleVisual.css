@@ -1,0 +1,15 @@
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.column {
+    flex: 0 0 48%; /* Adjust width as needed, 48% for a bit of spacing */
+    /* Optional: add some padding or margin for spacing */
+}
+
+canvas {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}

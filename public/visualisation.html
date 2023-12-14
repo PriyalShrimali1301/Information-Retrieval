@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Visualisation</title>
+    <link rel="stylesheet" href="styleVisual.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <h2>Category Distribution</h2>
+            <canvas id="categoryChart"></canvas>
+        </div>
+        <div class="column">
+            <h2>Relevancy Data</h2>
+            <canvas id="relevancyChart"></canvas>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h2>Query Length vs Response Time</h2>
+            <canvas id="queryResponseChart"></canvas>
+        </div>
+        <div class="column">
+            <h2>Average Response Time by Category</h2>
+            <canvas id="avgResponseTimeChart"></canvas>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h2>Number of Relevant Queries by Category</h2>
+            <canvas id="relevantQueriesChart"></canvas>
+        </div>
+        <!-- Add another column here if needed -->
+    </div>
+</body>
+</html>

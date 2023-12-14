@@ -1,0 +1,201 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.topics h3 {
+  text-align: center; /* Center the h3 within the topics */
+  color: #064478; /* Change the text color */
+  
+}
+
+textarea.disabled {
+  cursor: not-allowed;
+  background-color: #f5f5f5; /* Change the background color to a lighter shade if needed */
+  color: #666; /* Change the text color to a darker shade if needed */
+  border: 1px solid #ccc; /* Change the border color to match the background color */
+}
+
+.chatbot h2{
+  text-align: center;
+  color: #064478; /* Change the text color */
+  
+}
+.chatbot {
+  max-width: 600px;
+  
+  height: 80%;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display:flex;
+  flex-direction: column;
+  background-image: url('./coom.jpeg'); /* Set the background image */
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center; /* Center the background image */
+}
+
+.header {
+  background-color: #064478;
+  padding: 10px;
+  color: #fff;
+}
+
+.chatbox {
+  overflow-y: auto;
+  max-height: 50vh;
+  list-style: none;
+  /* padding: 0; */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 10px;
+}
+
+.chatbox li {
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.chat {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  max-width: 70%; /* Set a maximum width for the messages */
+  word-wrap: break-word;
+}
+
+.chat.incoming {
+  background-color: #064478;
+  color: #fff;
+  align-self: flex-start; /* Align incoming messages to the left */
+}
+
+.chat.outgoing {
+  background-color: #ddd;
+  align-self: flex-end; /* Align outgoing messages to the right */
+}
+
+.loading-dots {
+  text-align: center;
+}
+
+.chat-input {
+  display: flex;
+  /* align-items: center; */
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  justify-content: space-between;
+  flex-direction: column; 
+  align-items: flex-end;
+}
+
+textarea {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none;
+  margin-right: 8px;
+  width: 90%;
+}
+
+#send-btn {
+  background-color: #064478;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.material-symbols-rounded.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background-color: #ccc; /* Change the background color to a lighter shade if needed */
+  color: #666; /* Change the text color to a darker shade if needed */
+  border: 1px solid #ccc; /* Change the border color to match the background color */
+}
+
+#send-button disabled{
+  cursor: not-allowed;
+  opacity: 0.5;
+  background-color: #ccc; /* Change the background color to a lighter shade if needed */
+  color: #666; /* Change the text color to a darker shade if needed */
+  border: 1px solid #ccc; /* Change the border color to match the background color */
+}
+
+.topics {
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-group label {
+  margin-right: 15px;
+}
+.chat-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: auto; /* Push the chat input to the bottom */
+}
+
+textarea {
+  margin-top: 10px; /* Add some spacing between textarea and chatbox */
+  margin-bottom: 10px; /* Add margin at the bottom */
+} 
+
+/* Add this to your existing CSS file or style section */
+
+.like-dislike-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.like-button,
+.dislike-button {
+  background-color: #2196F3;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.like-button:hover,
+.dislike-button:hover {
+  background-color: #1565C0;
+}
+
+/* style.css or your existing stylesheet */
+.settings-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.settings-button:hover {
+  background-color: #1565C0;
+}
