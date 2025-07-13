@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { css } from '@emotion/react';
 import { MoonLoader } from 'react-spinners';
 import './style.css';
-import img from './comm.jpeg'
+import img from './comm.jpeg';
+import { REACT_APP_CHATBOT_SQL_API, REACT_APP_CHATBOT_BACKEND_API } from 'react-dotenv';
 
 const override = css`
   display: block;
@@ -69,8 +70,7 @@ const Chatbot = () => {
           const responseTime = totalResponseTime;
           const queryLength = queryWithoutSpaces.length;
 
-          const response = await fetch('http://34.125.247.58:5000/insertValues', {
-        //const response = await fetch('http://localhost:5000/insertValues', {
+          const response = await fetch(`${REACT_APP_CHATBOT_SQL_API}/insertValues`, {
             method: 'POST',
 
             headers: {
@@ -113,7 +113,7 @@ const Chatbot = () => {
     const responseTime = totalResponseTime;
     const queryLength = userQuery.length;
 
-    const response = await fetch('http://34.125.247.58:5000/updateValues', {
+    const response = await fetch(`${REACT_APP_CHATBOT_METRICS_API}/updateValues`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ const Chatbot = () => {
       const responseTime = totalResponseTime;
       const queryLength = userQuery.length;
   
-      const response = await fetch('http://34.125.247.58:5000/updateValues', {
+      const response = await fetch(`${REACT_APP_CHATBOT_SQL_API}/updateValues`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -226,7 +226,7 @@ const handleCheckboxChange = (value) => {
     if(selectedTopics.length==0){
       // Make an actual API call to your backend
       
-     const response = await fetch('http://34.125.33.113:5000/query/classify', {
+     const response = await fetch(`${REACT_APP_CHATBOT_BACKEND_API}/query/classify`, {
         //const response = await fetch('http://localhost:5000/query/classify', {
         method: 'POST',
         headers: {
@@ -247,7 +247,7 @@ const handleCheckboxChange = (value) => {
         try {
           console.log("Without Selection Novel")
           // Make an actual API call to your backend
-         const response = await fetch('http://34.125.33.113:5000/query', {
+         const response = await fetch(`${REACT_APP_CHATBOT_BACKEND_API}/query`, {
             
 
             //const response = await fetch('http://localhost:5000/query', {
@@ -293,7 +293,7 @@ const handleCheckboxChange = (value) => {
           console.log("Without Selection")  
           sessionStorage.setItem("Category","General")
           // Make an actual API call to your backend
-          const response = await fetch('http://34.125.247.58:5000/generalChat', {
+          const response = await fetch(`${REACT_APP_CHATBOT_SQL_API}/generalChat`, {
            // const response = await fetch('http://localhost:5000/generalChat', {
             method: 'POST',
             headers: {
@@ -335,7 +335,7 @@ const handleCheckboxChange = (value) => {
     else{
         try {
 
-            const response = await fetch('http://34.125.33.113:5000/query/classify', {
+            const response = await fetch(`${REACT_APP_CHATBOT_BACKEND_API}/query/classify`, {
         //const response = await fetch('http://localhost:5000/query/classify', {
         method: 'POST',
         headers: {
@@ -356,7 +356,7 @@ const handleCheckboxChange = (value) => {
         try {
             const uInput = `${trimmedMessage} ${selectedTopicsString}`;
             
-            const response = await fetch('http://34.125.33.113:5000/query', {
+            const response = await fetch(`${REACT_APP_CHATBOT_BACKEND_API}/query`, {
             //const response = await fetch('http://localhost:5000/query', {
               method: 'POST',
               headers: {

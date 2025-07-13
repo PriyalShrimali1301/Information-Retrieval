@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+🤖 RAG Chatbot - Information Retrieval System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview
+This project implements a Retrieval-Augmented Generation (RAG) chatbot system that combines information retrieval and language generation capabilities. The system uses ChromaDB as its vector database and integrates machine learning models for semantic search and response generation.
 
-## Available Scripts
+🛠️ Technologies Used
+- React 18 - Frontend framework
+- Python - Backend programming language
+- ChromaDB - Vector database for storage
+- Scikit-learn - Machine learning library
+- Pandas - Data manipulation
+- Gymnasium - Reinforcement learning
+- NumPy - Numerical computations
 
-In the project directory, you can run:
+✨ Features
+- Real-time chat interface with loading states
+- Vector-based information retrieval using ChromaDB
+- Machine learning-powered semantic search
+- Natural language processing capabilities
+- Responsive and interactive UI
+- Data visualization capabilities
 
-### `npm start`
+💻 Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. First, ensure you have Node.js version 16.x or 18.x installed:
+```bash
+node --version  # Should show v16.x.x or v18.x.x
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Create a `.env` file in the root directory and add your server URLs:
+```bash
+# Create .env file with the following content:
+REACT_APP_CHATBOT_SQL_API=http://YOUR_SQL_API_URL
+REACT_APP_CHATBOT_BACKEND_API=http://YOUR_BACKEND_API_URL
+```
 
-### `npm test`
+**Note:** 
+- Replace `YOUR_SQL_API_URL` with your SQL database API endpoint (used for metrics and analytics)
+- Replace `YOUR_BACKEND_API_URL` with your chatbot backend API endpoint (used for core chat functionality)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+These URLs should point to your production servers:
+- SQL API: Handles metrics storage and analytics
+- Backend API: Handles chat processing and responses
 
-### `npm run build`
+2. Clone the repository:
+```bash
+git clone https://github.com/yourusername/RAG-Chatbot.git
+cd RAG-Chatbot
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install dependencies:
+```bash
+npm install
+pip install -r requirements.txt
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+📝 Usage Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Start the development server:
+```bash
+npm start
+```
 
-### `npm run eject`
+2. Open http://localhost:3000 in your browser
+3. Use the chat interface to interact with the RAG system
+4. The system will process your queries and provide relevant responses based on the stored knowledge base
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+📂 Files
+- src/ - Frontend source code
+- public/ - Static assets
+- build/ - Build output
+- chroma_db/ - ChromaDB database files
+- requirements.txt - Backend dependencies
+- package.json - Frontend dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📄 License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project is licensed under the MIT License – see the LICENSE file for details.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🤝 Contributing
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to fork this repository and submit pull requests if you have improvements or suggestions!
